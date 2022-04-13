@@ -3,4 +3,51 @@ config:
   create: true
   dotpath: dotfiles
 dotfiles:
+  f_xinitrc:
+    src: xinitrc
+    dst: ~/.xinitrc
+  f_gitconfig:
+    src: gitconfig
+    dst: ~/.gitconfig
+  f_fehbg:
+    src: fehbg
+    dst: ~/.fehbg
+    chmod: '754'
+  f_bashrc:
+    src: bashrc
+    dst: ~/.bashrc
+  f_config:
+    src: config/i3/config
+    dst: ~/.config/i3/config
+  f_config.toml:
+    src: config/i3status-rust/config.toml
+    dst: ~/.config/i3status-rust/config.toml
+  f_jgmenurc:
+    src: config/jgmenu/jgmenurc
+    dst: ~/.config/jgmenu/jgmenurc
+  f_init.vim:
+    src: config/nvim/init.vim
+    dst: ~/.config/nvim/init.vim
+  f_picom.conf:
+    src: config/picom.conf
+    dst: ~/.config/picom.conf
+  f_starship.toml:
+    src: config/starship.toml
+    dst: ~/.config/starship.toml
+  f_ssh-agent.service:
+    src: config/systemd/user/ssh-agent.service
+    dst: ~/.config/systemd/user/ssh-agent.service
 profiles:
+  tmak2002:
+    dotfiles:
+    - f_xinitrc
+    - f_gitconfig
+    - f_fehbg
+    - f_bashrc
+    - f_config
+    - f_config.toml
+    - f_jgmenurc
+    - f_init.vim
+    - f_picom.conf
+    - f_starship.toml
+    - f_ssh-agent.service

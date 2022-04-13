@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill '/home/torben/Downloads/eldenring-01-4k-1623357441326_vs8z.jpg' 

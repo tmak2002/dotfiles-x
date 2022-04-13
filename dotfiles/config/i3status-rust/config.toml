@@ -1,0 +1,52 @@
+[theme]
+name = "dracula"
+[icons]
+name = "awesome5"
+
+[[block]]
+block = "sound"
+driver = "pulseaudio"
+on_click = "pavucontrol"
+step_width = 1
+format = "{volume}"
+
+[[block]]
+block = "disk_space"
+path = "/"
+info_type = "used"
+format = "{icon} {used}/{total} ({available} free)"
+[block.theme_overrides]
+idle_bg = "#9c0808"
+idle_fg = "#000000"
+
+[[block]]
+block = "memory"
+format_mem = "{mem_used}/{mem_total}({mem_used_percents})"
+display_type = "memory"
+icons = true
+clickable = true
+interval = 5
+warning_mem = 80
+critical_mem = 95
+[block.theme_overrides]
+idle_bg = "#fff700"
+idle_fg = "#000000"
+
+[[block]]
+block = "cpu"
+interval = 1
+format = "{barchart} {utilization} {frequency}"
+[block.theme_overrides]
+idle_bg = "#80ed82"
+idle_fg = "#000000"
+
+
+[[block]]
+block = "time"
+format = "%a %d/%m %R"
+timezone = "Europe/Berlin"
+interval = 60
+locale = "de_DE"
+[block.theme_overrides]
+idle_bg = "#123456"
+idle_fg = "#000000"
