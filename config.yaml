@@ -37,6 +37,9 @@ dotfiles:
   f_ssh-agent.service:
     src: config/systemd/user/ssh-agent.service
     dst: ~/.config/systemd/user/ssh-agent.service
+  d_polybar:
+    src: config/polybar
+    dst: ~/.config/polybar
 profiles:
   tmak2002:
     dotfiles:
@@ -51,3 +54,6 @@ profiles:
     - f_picom.conf
     - f_starship.toml
     - f_ssh-agent.service
+  localhost:
+    dotfiles:
+    - d_polybar
